@@ -38,6 +38,7 @@ fn is_monotonic_change(levels: Vec<u64>) -> bool {
     let should_be_increasing = first_elem.lt(last_elem);
     let mut prev_elem = first_elem;
     let mut curr_elem: &u64;
+    
     for i in 1..levels.len() {
         curr_elem = levels.get(i).expect("No elem found at index");
         match should_be_increasing {
